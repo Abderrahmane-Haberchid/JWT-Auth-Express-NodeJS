@@ -13,11 +13,11 @@ const users = [
   },
   {
     username: 'haberchid',
-    title: 'haberchid123'
+    password: 'haberchid123'
   }
 ]
 
-app.get('/posts', authenticateToken, (req, res) => {
+app.get('/users', authenticateToken, (req, res) => {
   res.json(users.filter(user => user.username === req.user.name))
 })
 
